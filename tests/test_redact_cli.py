@@ -27,7 +27,7 @@ def test_redact_keeps_link_but_hides_its_number() -> None:
 
 
 def test_redact_email_and_handle() -> None:
-    out = redact("راسل a@cibeg-help.test او حول omar.test@instapay")
+    out = redact("راسل a@cibeg-help.test او حول fake.handle@instapay")
     assert out == "راسل [EMAIL_1] او حول [INSTAPAY_1]"
 
 

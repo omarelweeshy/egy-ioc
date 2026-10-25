@@ -13,7 +13,7 @@ General IOC extractors are built for English threat reports. They miss what Egyp
 | `٠١٠٠ ٠٠٠ ٠٠٠١` (Arabic-Indic digits, spaced) | No match | `+201000000001`, operator `vodafone` |
 | `رقم01000000005` (number glued to Arabic text) | No match | Phone number |
 | `فودافون كاش ٠١٠٠...` | A phone number at best | A **wallet**, provider `vodafone_cash` |
-| `omar.test@instapay` | No match, or a broken domain | InstaPay handle |
+| `fake.handle@instapay` | No match, or a broken domain | InstaPay handle |
 | `https://cіbeg-secure.test` (Cyrillic `і`) | A URL | URL flagged `lookalike_brand: cib`, reason `homoglyph` |
 | `منحـــة تَكافُل وكَرامة` (tatweel and diacritics to dodge filters) | No match | Brand `takaful_karama` |
 | `ابعتلي الكود اللي جالك` | Nothing | Signal `otp_request` |

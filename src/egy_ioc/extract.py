@@ -35,7 +35,7 @@ _ARABIC_URL = re.compile(
 )
 _SCHEME_URL = re.compile(rf"(?<![A-Za-z0-9])h(?:tt|xx)ps?(?:://|\[://\]|\[:\]//){_URL_CHAR}+", re.I)
 _WWW_URL = re.compile(rf"(?<![A-Za-z0-9@./-])www{_DOT}{_URL_CHAR}+", re.I)
-# Not followed by "@": "first.last@x.com" and "omar.shop@instapay" are an email and a handle.
+# Not followed by "@": "first.last@x.com" and "fake.shop@instapay" are an email and a handle.
 _BARE = re.compile(
     rf"(?<![A-Za-z0-9@./_-])(?:{_LABEL}{_DOT})+{_TLD}(?![A-Za-z0-9@-]|{_DOT}[A-Za-z0-9])"
     rf"(?:[/?]{_URL_CHAR}*)?",

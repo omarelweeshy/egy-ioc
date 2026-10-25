@@ -12,7 +12,7 @@ SAMPLES: tuple[str, ...] = (
     # Fake prize + malicious app + shortener
     "مبروك كسبت 5 آلاف جنيه من البنك الأهلي! نزل التطبيق NBE_update.apk من bit.ly/3xYz",
     # Wrong-transfer refund scam, Franco-Arab
-    "ana 7awelt lek 1500 EGP bel ghalat, raga3hom 3ala InstaPay omar.test@instapay aw kalemni "
+    "ana 7awelt lek 1500 EGP bel ghalat, raga3hom 3ala InstaPay fake.handle@instapay aw kalemni "
     "+20 11 0000 0002",
     # WhatsApp account takeover, English
     "Hi it's me, I sent you a code by mistake, can you send me the code please? wa.me/201200000003",

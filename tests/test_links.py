@@ -130,14 +130,10 @@ def test_whatsapp_api_link_and_telegram() -> None:
 
 
 def test_instapay_link_and_handle() -> None:
-    assert (
-        _one("ادفع هنا https://ipn.eg/S/omar.test/instapay/2Dc", "instapay_link").attrs[
-            "official_brand"
-        ]
-        == "instapay"
-    )
-    h = _one("حول على Omar.Test@InstaPay لو سمحت", "instapay_handle")
-    assert h.value == "omar.test@instapay"
+    link = _one("ادفع هنا https://ipn.eg/S/fake.handle/instapay/2Dc", "instapay_link")
+    assert link.attrs["official_brand"] == "instapay"
+    h = _one("حول على Fake.Handle@InstaPay لو سمحت", "instapay_handle")
+    assert h.value == "fake.handle@instapay"
 
 
 def test_email_gets_domain_analysis() -> None:
@@ -147,7 +143,7 @@ def test_email_gets_domain_analysis() -> None:
 
 
 def test_email_local_part_is_not_a_domain() -> None:
-    found = extract("mail omar.shop@example.test")
+    found = extract("mail fake.shop@example.test")
     assert [i.type for i in found] == ["email"]
 
 
