@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Secrets (an HMAC key for `egy-ioc redact` must never be committed)
+.env
+.env.*
+
+# Real messages stay local: they hold victims' and scammers' personal data.
+data/
+!src/egy_ioc/data/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
